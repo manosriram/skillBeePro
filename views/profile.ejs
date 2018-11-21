@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include navbar.ejs %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Profile.</title>
+  </head>
+  <style>
+    #details {
+      font-size: 20px;
+      font-weight: 40%;
+    }
+    .img-circle {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      display: block;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      left: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="alert alert-primary" id="details" role="alert">
+          <img
+            id="profilePic"
+            src="/myuploads/<%= payload.profilePic %>"
+            class="img-circle"
+          />
+          <strong>
+            Name : <%= payload.name %> <br /><br />
+            Gender: <%= payload.gender %> <br />
+            <br />
+            UserName: <%= payload.username %> <br />
+            <br />
+            email: <%= payload.email %> <br />
+            <br />
+            Course Registered: <%= payload.course %> <br />
+            <br />
+            Works as <%= payload.worksAs %> at <%= payload.worksAt %>. <br />
+            <br />
+            Experience: <%= payload.experience %> <br />
+            <br />
+            Length of Course: <%= payload.courseLength %> <br />
+            <br />
+            Joined: <%= payload.yearOfJoining %> <br />
+            <br />
+            Member Since: <%= payload.memberSince %> <br />
+            <br />
+            <br />
+            <br />
+          </strong>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

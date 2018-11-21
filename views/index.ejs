@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include navbar.ejs %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Page</title>
+  </head>
+  <style>
+    body {
+      background-color: grey;
+    }
+    a {
+      color: white;
+    }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+    .aParent div {
+      float: left;
+      clear: none;
+    }
+  
+    #left {
+      left: 50%;
+    }
+    #inner {
+      width: 50%;
+      margin: 0 auto;
+    }
+    #all {
+      text-align: center;
+    }
+       .img-circle {
+      width: 125px;
+      height: 125px;
+      background-size: cover;
+      display: block;
+      background-size: cover;
+      display: block;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;   
+    }
+    h3 {
+      text-align: center;
+    }
+  </style>
+  </style>
+  <body>
+    <% if (payload.length == 0) { %>
+      <hr>
+      <strong> <h3>No Students Registered!</h3></strong>
+      <% } %>
+      <br />
+      <hr>
+    <!-- Left -->
+    <div id="left">
+      <div class="aParent">
+        <div id="inner">
+          <% for(var i=0; i < payload.length; i++) { %> <% if (i%2 != 0) { %>
+          <span>
+             <img
+              id="profilePic"
+              src="/myuploads/<%= payload[i].profilePic %>"
+              class="img-circle"
+            />
+            <h2>
+              <a href="/student/studentProfile/<%= payload[i].name %>">
+                <%= payload[i].name %></a
+              >
+            </h2>
+            <% if (payload[i].experience > 1) { %>
+            <strong>
+              <p>
+                <%= payload[i].experience %> Years Experience</p>
+            </strong>
+            <% } else { %>
+            <strong>
+              <p>
+                <%= payload[i].experience %> Year Experience</p>
+            </strong>
+            <% } %> <% if (payload[i].worksAs) { %>
+            <p>
+             <strong> Works as  <%=payload[i].worksAs %> at <%= payload[i].worksAt %></strong>
+            </p>
+            <% } %>
+          </span>
+
+          <% } %> <% } %>
+        </div>
+      </div>
+    </div>
+    <!-- Right -->
+    <div>
+      <div id="right">
+        <% for(var i=0; i < payload.length; i++) { %> <% if (i%2 == 0) { %>
+        <span>
+          <img id="profilePic" src="/myuploads/<%= payload[i].profilePic %>" class="img-circle" />
+          <h2>
+            <a href="/student/studentProfile/<%= payload[i].name %>">
+              <%= payload[i].name %></a
+            >
+          </h2>
+          <% if (payload[i].experience > 1) { %>
+          <p><%= payload[i].experience %> Years Experience</p>
+          <% } else { %>
+          <strong> <p><%= payload[i].experience %> Year Experience</p></strong>
+          <% } %> <% if (payload[i].worksAs) { %>
+          <strong> Works as
+            <%=payload[i].worksAs %> at
+            <%= payload[i].worksAt %></strong>
+          <hr />
+          <% } %>
+        </span>
+        <% } %> <% } %>
+      </div>
+    </div>
+  </body>
+</html>

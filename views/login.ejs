@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include navbar.ejs %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin Login</title>
+  </head>
+  <style>
+    #username,
+    #password,
+    #submit {
+      width: 50%;
+    }
+    #formLogin,
+    h3 {
+      margin-left: 25%;
+    }
+    h3 {
+      font-family: sans-serif;
+      font-weight: 100%;
+    }
+  </style>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <strong> <h3>Login Here.</h3></strong> <br />
+        <form
+          id="formLogin"
+          action="/auth/adminLogin"
+          method="POST"
+          autocomplete="off"
+        >
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            id="username"
+            autofocus
+          />
+          <br /><br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            name="password"
+          />
+          <br /><br />
+          <input
+            class="btn btn-primary"
+            type="submit"
+            value="Login"
+            id="submit"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

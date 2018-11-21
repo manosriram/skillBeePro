@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include navbar.ejs %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search</title>
+  </head>
+  <style>
+    .vertical-menu {
+      width: 50%;
+    }
+
+    .vertical-menu a {
+      background-color: white;
+      color: black;
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+    }
+
+    .vertical-menu a:hover {
+      background-color: #ccc;
+    }
+
+    .vertical-menu a.active {
+      background-color: #4caf50;
+    }
+    .container div {
+      float: left;
+      clear: none;
+    }
+    .jumbotron {
+      height: 50%;
+    }
+
+    body {
+      background-color: white;
+    }
+  </style>
+  <body>
+    <div class="container" id="left">
+      <div class="vertical-menu">
+        <a href="#" class="active">Batch Wise</a>
+        <a href="/student/byBatchYear/1998">1998</a>
+        <a href="/student/byBatchYear/1999">1999</a>
+        <a href="/student/byBatchYear/2000">2000</a>
+        <a href="/student/byBatchYear/2001">2001</a>
+        <a href="/student/byBatchYear/2002">2002</a>
+        <a href="/student/byBatchYear/2003">2003</a>
+        <a href="/student/byBatchYear/2004">2004</a>
+        <a href="/student/byBatchYear/2005">2005</a>
+        <a href="/student/byBatchYear/2006">2006</a>
+        <a href="/student/byBatchYear/2007">2007</a>
+        <a href="/student/byBatchYear/2008">2008</a>
+        <a href="/student/byBatchYear/2009">2009</a>
+        <a href="/student/byBatchYear/2010">2010</a>
+        <a href="/student/byBatchYear/2011">2011</a>
+        <a href="/student/byBatchYear/2012">2012</a>
+        <a href="/student/byBatchYear/2013">2013</a>
+        <a href="/student/byBatchYear/2014">2014</a>
+        <a href="/student/byBatchYear/2015">2015</a>
+        <a href="/student/byBatchYear/2016">2016</a>
+        <a href="/student/byBatchYear/2017">2017</a>
+        <a href="/student/byBatchYear/2018">2018</a>
+      </div>
+
+      <div class="vertical-menu" id="vertical">
+        <a class="active">Course Wise</a>
+        <a href="/student/byCourse/Welding">Welding</a>
+        <a href="/student/byCourse/Electrician">Electrician</a>
+        <a href="/student/byCourse/Automobile Technician"
+          >Automobile Technician</a
+        >
+        <a href="/student/byCourse/Fitter">Fitter</a>
+        <a href="/student/byCourse/Advanced Welding">Advanced Welding</a>
+        <a href="/student/byCourse/Welder Gas and Electric"
+          >Welder Gas and Electric</a
+        >
+        <a href="/student/byCourse/Machinist">Machinist</a>
+        <a href="/student/byCourse/Mechanic Motor Vehicle"
+          >Mechanic Motor Vehicle</a
+        >
+        <a href="/student/byCourse/Instrument Mechanic">Instrument Mechanic</a>
+        <a href="/student/byCourse/Electroplater">Electroplater</a>
+        <a href="/student/byCourse/Advanced Electronics"
+          >Advanced Electronics</a
+        >
+        <a href="/student/byCourse/Network Technician">Network Technician</a>
+        <a href="/student/byCourse/Cutting and Sewing">Cutting and Sewing</a>
+      </div>
+    </div>
+  </body>
+</html>

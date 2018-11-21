@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include navbar.ejs %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Register Admin!</h3>
+
+    <form action="/auth/adminRegister" method="POST">
+      <input type="text" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="password" />
+      <input type="text" name="adminKey" />
+
+      <input class="btn btn-primary" type="submit" value="Register" />
+    </form>
+  </body>
+</html>

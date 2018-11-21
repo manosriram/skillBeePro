@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include bootstrapCdn.ejs %> <%- include navbar.ejs %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Form</title>
+  </head>
+  <style>
+    #courseLength {
+      width: 20%;
+    }
+    input[name="email"] {
+      width: 40%;
+    }
+    input[name="username"] {
+      width: 40%;
+    }
+    input[name="name"] {
+      width: 40%;
+    }
+    #top {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="jumbotron">
+      <h2 id="top">Register Your Student here!!</h2>
+      <div class="container">
+        <form
+          action="/student/studentRegister"
+          method="POST"
+          enctype="multipart/form-data"
+          autocomplete="off"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Student's Email Address"
+          />
+          <br />
+          <br />
+          <input type="text" name="name" id="" placeholder="Student's Name" />
+          <br /><br />
+          <input
+            type="text"
+            name="username"
+            placeholder="Student's User Name"
+          />
+          <br />
+          <br />
+
+          <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <br />
+          <br />
+          <label>Course</label>
+          <select name="course">
+            <option value="Course">Select Course</option>
+            <option value="Welding">Welding</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Automobile Technician">Automobile Technician</option>
+            <option value="Fitter">Fitter</option>
+            <option value="Advanced Welding">Advanced Welding</option>
+            <option value="Welder Gas and Electric"
+              >Welder Gas and Electric</option
+            >
+            <option value="Machinist">Machinist</option>
+            <option value="Mechanic Motor Vehicle"
+              >Mechanic Motor Vehicle</option
+            >
+            <option value="Instrument Mechanic">Instrument Mechanic</option>
+            <option value="Electroplater">Electroplater</option>
+            <option value="Advanced Electronics">Advanced Electronics</option>
+            <option value="Network Technician">Network Technician</option>
+            <option value="Cutting and Sewing">Cutting and Sewing</option>
+          </select>
+          <br /><br />
+
+          <label>Experience </label>
+          <select name="experience">
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+            <option value="6">6 Years</option>
+            <option value=">6">> 6 Years</option>
+          </select>
+          <br />
+          <br />
+          <input
+            type="text"
+            name="courseLength"
+            placeholder="Length of the Course Taken"
+            id="courseLength"
+          />
+          <br />
+          <br />
+          <label>Batch Year</label>
+          <select name="yearOfJoining">
+            <option value="0">Select Year</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+          </select>
+          <br />
+          <br />
+          <input type="text" name="worksAs" placeholder="Works as" />
+          <label>at</label>
+          <input type="text" name="worksAt" placeholder="Works At" />
+          <br /><br />
+          <input
+            type="file"
+            name="profilePic"
+            class="btn btn-danger"
+            required
+          />
+          <br />
+          <br />
+          <input type="submit" class="btn btn-success" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
