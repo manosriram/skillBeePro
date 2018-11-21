@@ -65,7 +65,7 @@
           <span>
              <img
               id="profilePic"
-              src="<%= payload[i].profilePic %>"
+              src="/<%= payload[i].profilePic %>"
               class="img-circle"
             />
             <h2>
@@ -99,7 +99,7 @@
       <div id="right">
         <% for(var i=0; i < payload.length; i++) { %> <% if (i%2 == 0) { %>
         <span>
-          <img id="profilePic" src="<%= payload[i].profilePic %>" class="img-circle" />
+          <img id="profilePic" src="/<%= payload[i].profilePic %>" class="img-circle" />
           <h2>
             <a href="/student/studentProfile/<%= payload[i].name %>">
               <%= payload[i].name %></a
