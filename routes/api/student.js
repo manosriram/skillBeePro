@@ -11,7 +11,10 @@ var storage = multer.diskStorage({
     cb(null, __dirname + "../../../public/myuploads/");
   },
   filename: function(req, file, cb) {
-    cb(null, file.originalname);
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
   }
 });
 var upload = multer({ storage: storage });
@@ -78,7 +81,8 @@ router.post("/studentRegister", upload.single("profilePic"), (req, res) => {
             const yearOfJoining = req.body.yearOfJoining;
             const worksAt = req.body.worksAt;
             const worksAs = req.body.worksAs;
-            const profilePic = req.file.originalname;
+
+            const profilePic = `myuploads/${req.file.filename}`;
 
             const newStudent = new Student({
               name: name,
