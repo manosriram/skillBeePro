@@ -66,7 +66,7 @@ router.post("/studentRegister", upload.single("profilePic"), (req, res) => {
               return res.json({
                 courseLengthRequired: "Course Length Required.."
               });
-            if (!req.body.yearOfJoining)
+            if (req.body.yearOfJoining == "0")
               return res.json({
                 joiningYearRequired: "Joining Year Required.."
               });
