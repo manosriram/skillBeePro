@@ -81,6 +81,8 @@ router.post("/adminLogin", (req, res) => {
                   //   res.json({ success: "User Logged In!" });
                 }
               );
+            } else {
+              res.status(404).json({ noAccess: "Password Incorrect" });
             }
           })
           .catch();
