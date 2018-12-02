@@ -57,7 +57,6 @@ app.use("/student", student);
 app.get("/", (req, res) => {
   res.redirect("/auth");
 });
-
 app.listen(port, () => {
   console.log(`Server Running at ${port}`);
 });
